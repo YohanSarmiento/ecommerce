@@ -5,13 +5,13 @@ from rest_framework import serializers
 from store.models import Customer, Product
 
 # Create a model serializer
-class CustomerSerializer(serializers.HyperlinkedModelSerializer):
+class CustomerSerializer(serializers.ModelSerializer):
 	# specify model and fields
 	class Meta:
 		model = Customer
 		fields = '__all__'
 
-class ProductSerializer(serializers.HyperlinkedModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
 	# specify model and fields
 	class Meta:
 		model = Product
